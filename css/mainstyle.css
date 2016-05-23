@@ -1,0 +1,111 @@
+
+	/*font-family: 'Kaushan Script', cursive;*/
+	/*font-family: 'Acme', sans-serif;*/
+/* Common items */
+body {
+    background-image: url(../images/DC.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Kaushan Script', cursive; 
+}
+/* Starter page */
+.start {
+	background-color: #f5e5cd;
+	box-shadow: 10px 10px 5px #888888;
+	padding-top: .01em;
+	margin-top: 18em auto;
+	width: 30em;
+	height: 10em;
+	text-align: center;
+	display: none;
+}
+
+h1, h3, button {
+	text-align: center;
+	font-family: 'Acme', sans-serif;
+}
+.start button {
+	background-color: #e2d8c5;
+	color: #182B5C;
+	padding: .1em;
+	margin-top: -.5em;
+	font-weight: 700;
+	height: 2em;
+	width: 5em;
+	border: none;
+	box-shadow: 8px 8px 5px #424f87;
+}
+button, .howTo .fa-times:hover {
+	cursor: pointer;
+}
+/* How to */
+.howTo {
+	background-color: #f5e5cd;
+	box-shadow: 10px 10px 5px #888888;
+	margin: 5em auto auto auto;
+	padding: 1em;
+	height: 35em;
+	width: 60em;
+	/*display: none;*/
+
+}
+
+.howTo h3 {
+		font-size: 2em;
+}
+.howTo .fa-times{
+	margin-top: -.1em;
+	margin-bottom: -1em;
+	float: right;
+}
+.howTo img {
+	margin-top: -3em;
+	height: 30em;
+	float: left;
+}
+.HTinside {
+	float: right;
+	width: 20em;
+	line-height: 2em;
+}
+
+.title {
+	margin-right: 1em;
+}
+.textName{
+	background-color: #F5E5CD;
+	border: .1em solid #424f87;
+	box-shadow: 8px 8px 5px #424f87;
+	text-align: center;
+}
+img.logo {
+	height: 5em;
+	margin-left: 55em;
+	clear: both;
+}
+div.submit {
+	margin-top: 10em;
+	margin-left: 20em;
+	line-height: .5em;
+	text-align: center;
+	font-family: 'Acme', sans-serif;
+
+}
+div.submit button {
+	background-color: #e2d8c5;
+	color: #182B5C;
+	font-weight: 700;
+	height: 2em;
+	width: 5em;
+	border: none;
+	box-shadow: 5px 5px 3px #424f87;
+	
+}
+div.submit p {
+	font-size: .8em;
+}
+/* Question page */
+/* Correct page */
+/* Incorrect page */
+
+

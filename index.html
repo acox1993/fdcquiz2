@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+	<link href='https://fonts.googleapis.com/css?family=Acme|Kaushan+Script' rel='stylesheet' type='text/css'>
+	<title>Quiz App</title>
+</head>
+<body>
+		<!-- initial page -->
+	<div class="start">
+		<h1>Female DC Comic Characters Quiz</h1>
+		<button> Test Me! </button>
+
+	</div>
+
+			<!-- instruction page -->
+	<div class="howTo">
+		<i class="fa fa-times" aria-hidden="true"></i>
+		<h3>Instructions</h3>
+		<img src="images/Harley1.png" >
+		<div class="HTinside">
+			<p> <span class="title">Name:</span>
+					<input class="textName" type="text" name="name"></p>
+			<p> <span class="title">Alignment: </span>
+					<input type="radio" class="alignment" name="alignment" value="heroine"> Heroine 
+					<input type="radio" class="alignment" name="alignment" value="villain"> Villain
+			</p>
+			<p> <span class="title">First appearance:</span>
+					<br>
+					<input type="radio" class="firstAppearance" name="firstAppearance" value="batmanIssue83"> Batman Issue #83
+					<br>
+					<input type="radio" class="firstAppearance" name="firstAppearance" value="batmanAnimated"> Batman: The Animated Series 
+					<br>
+					<input type="radio" class="firstAppearance" name="firstAppearance" value="batmanReturns"> Batman: The Dark Knight Returns
+					<br>
+					<input type="radio" class="firstAppearance" name="firstAppearance" value="batmanIssue173"> Batman Issue #173
+					<br>
+					<input type="radio" class="firstAppearance" name="firstAppearance" value="detectiveComics27"> Detective Comics #27
+			</p>
+
+		</div>
+		<div class="submit">
+			<button> Submit </button>
+			<p><b>Question:</b> 1/6</p>
+			<p><b>Score:</b> 0%</p>
+		</div>
+			<img class="logo" src="images/New-DC.png">
+
+	</div>
+	
+</body>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+	 	<script src="js/app.js"></script>
+	 	<script src="https://use.fontawesome.com/ced1a2be28.js"></script>
+</html>
