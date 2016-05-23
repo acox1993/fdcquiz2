@@ -6,21 +6,35 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/mainstyle.css">
 	<link href='https://fonts.googleapis.com/css?family=Acme|Kaushan+Script' rel='stylesheet' type='text/css'>
+
 	<title>Quiz App</title>
 </head>
 <body>
+	<nav> 
+		<ul class="clearfix">
+			<li><a class="what" href="#">How To ?</a></li>
+			<li><a class="new" href="#">Restart</a></li>
+		</ul>
+	</nav>
 		<!-- initial page -->
 	<div class="start">
 		<h1>Female DC Comic Characters Quiz</h1>
 		<button> Test Me! </button>
 
 	</div>
-
+		
 			<!-- instruction page -->
 	<div class="howTo">
 		<i class="fa fa-times" aria-hidden="true"></i>
+		<div class="popup">
+			<p>The Image to the left is the character the questions revolve around.
+			</p>
+			<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+			<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+
+		</div>
 		<h3>Instructions</h3>
-		<img src="images/Harley1.png" >
+		<img class="highlighted" src="images/Harley1.png" >
 		<div class="HTinside">
 			<p> <span class="title">Name:</span>
 					<input class="textName" type="text" name="name"></p>
@@ -28,7 +42,7 @@
 					<input type="radio" class="alignment" name="alignment" value="heroine"> Heroine 
 					<input type="radio" class="alignment" name="alignment" value="villain"> Villain
 			</p>
-			<p> <span class="title">First appearance:</span>
+			<p > <span class="title">First appearance:</span>
 					<br>
 					<input type="radio" class="firstAppearance" name="firstAppearance" value="batmanIssue83"> Batman Issue #83
 					<br>
@@ -42,7 +56,7 @@
 			</p>
 
 		</div>
-		<div class="submit">
+		<div class="submit" >
 			<button> Submit </button>
 			<p><b>Question:</b> 1/6</p>
 			<p><b>Score:</b> 0%</p>
@@ -54,5 +68,5 @@
 </body>
 		<script src="http://code.jquery.com/jquery.min.js"></script>
 	 	<script src="js/app.js"></script>
-	 	<script src="https://use.fontawesome.com/ced1a2be28.js"></script>
+	 	<script src="https://use.fontawesome.com/ecf68117df.js"></script>
 </html>

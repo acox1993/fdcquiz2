@@ -7,13 +7,39 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     font-family: 'Kaushan Script', cursive; 
+    /*box-sizing: border-box;*/
 }
+/*navigation*/
+nav {
+	position: relative;
+	height: 10%;
+	padding: 1em;
+}
+
+nav ul li {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1em;
+}
+
+nav ul li:first-child {
+	float: left;
+}
+
+nav ul li:last-child {
+	float: right;
+}
+nav a {
+	text-decoration: none;
+	color: #fff;
+}
+
 /* Starter page */
 .start {
 	background-color: #f5e5cd;
 	box-shadow: 10px 10px 5px #888888;
 	padding-top: .01em;
-	margin-top: 18em auto;
+	margin: 15em auto;
 	width: 30em;
 	height: 10em;
 	text-align: center;
@@ -42,7 +68,7 @@ button, .howTo .fa-times:hover {
 .howTo {
 	background-color: #f5e5cd;
 	box-shadow: 10px 10px 5px #888888;
-	margin: 5em auto auto auto;
+	margin: 3em auto auto auto;
 	padding: 1em;
 	height: 35em;
 	width: 60em;
@@ -78,14 +104,21 @@ button, .howTo .fa-times:hover {
 	box-shadow: 8px 8px 5px #424f87;
 	text-align: center;
 }
+.highlighted {
+	border: .1em solid #424f87;
+	box-shadow: 8px 8px 5px #424f87;
+}
 img.logo {
 	height: 5em;
 	margin-left: 55em;
 	clear: both;
 }
 div.submit {
+	height: 6em;
+	width: 8em;
+	padding-top: 1em;
 	margin-top: 10em;
-	margin-left: 20em;
+	margin-left: 25em;
 	line-height: .5em;
 	text-align: center;
 	font-family: 'Acme', sans-serif;
@@ -103,6 +136,16 @@ div.submit button {
 }
 div.submit p {
 	font-size: .8em;
+}
+
+.popup {
+	font-family: 'Acme', sans-serif;
+	height: 5em;
+	width: 20em;
+	background-color: #fff;
+	position: fixed;
+	margin-top: -2em;
+	margin-left: 0;
 }
 /* Question page */
 /* Correct page */
