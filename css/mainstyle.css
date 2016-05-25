@@ -68,7 +68,7 @@ button, .howTo .fa:hover {
 	cursor: pointer;
 }
 /* How to */
-.howTo {
+.howTo, .questions {
 	background-color: #f5e5cd;
 	box-shadow: 10px 10px 5px #888888;
 	margin-top: 3em;
@@ -76,13 +76,16 @@ button, .howTo .fa:hover {
 	padding: 1em;
 	height: 35em;
 	width: 60em;
-	position: fixed;
 	display: none;
-	z-index: 999;
 
 }
 
-.howTo h3 {
+.howTo {
+z-index: 999;
+position: fixed;
+}
+
+.howTo h3, .questions h3 {
 		font-size: 2em;
 }
 .howTo .fa-times{
@@ -90,12 +93,12 @@ button, .howTo .fa:hover {
 	margin-bottom: -1em;
 	float: right;
 }
-.howTo img {
+.howTo img, .questions img {
 	margin-top: -3em;
 	height: 30em;
 	float: left;
 }
-.HTinside {
+.HTinside, .Qinside {
 	float: right;
 	width: 20em;
 	line-height: 2em;

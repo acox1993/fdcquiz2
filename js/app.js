@@ -9,6 +9,7 @@ $(document).ready(function(){
 	$('.buttonS').click(function(){
 		$('.howTo').fadeIn(1000);
 		$('.start').hide();
+		$('.questions').show();
 	});
 
 	//how to close
