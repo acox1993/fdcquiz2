@@ -10,6 +10,7 @@ $(document).ready(function(){
 		$('.howTo').fadeIn(1000);
 		$('.start').hide();
 		$('.questions').show();
+		go();
 	});
 
 	//how to close
@@ -87,5 +88,105 @@ $(document).ready(function(){
 
 	 	});
 
+		// 0-Catwoman
+	var Catwoman = {
+		"questionID": "Question 1",
+		"questionNumber": "1/6",
+		"picture": "images/catwoman.jpg" ,
+		"name": "name", //how do i establish input box that right
+		"alignment": ["Heroine","Villian"] ,
+		"appearance": ["Batman: The Animated Series", "Batman Issue #173", "The Cat Issue #1", "Batman Issue #1", "None Are Correct"]
+	}
+
+		// 1-Vixen
+	var Vixen = {
+		"questionID": "Question 2",
+		"questionNumber": "2/6",
+		"picture": "images/vixen2.jpg" ,
+		"name": "name",
+		"alignment": ["Heroine","Villian"] ,
+		"appearance": ["Black Panther Issue #92", "Action Comics Issue #521", "African Amazon Issue #1", "None Are Correct", "N"]
+	}
+
+		// 2-Hawkgirl
+	var Hawkgirl = {
+		"questionID": "Question 3",
+		"questionNumber": "3/6",
+		"picture": "images/Hawkgirl1.jpg" ,
+		"name": "name",
+		"alignment": ["Heroine","Villian"] ,
+		"appearance": ["None are Correct", "B", "C", "D", "Flash Comics Issue #1"]
+	}
+
+		// 3-Harley
+	var Harley = {
+		"questionID": "Question 4",
+		"questionNumber": "4/6",
+		"picture": "images/Harley1.png" ,
+		"name": "name",
+		"alignment": ["Heroine","Villian"] ,
+		"appearance": ["Batman Issue #83", "Batman: The Animated Series", "Batman Issue #173", "Batman: The Dark Knight Returns", "Detective Comics #27"]
+	}
+
+		// 4-Black Canary
+	var BlackCanary = {
+		"questionID": "Question 5",
+		"questionNumber": "5/6",
+		"picture": "images/Black-Canary.jpg" ,
+		"name": "name",
+		"alignment": ["Heroine","Villian"] ,
+		"appearance": ["Bat", "None Are Correct", "B", "Flash Comic Issue #86", "D"]
+	}	
+
+		// 5-Katana
+	var Katana = {
+		"questionID": "Question 6",
+		"questionNumber": "6/6",
+		"picture": "images/Katana_1.jpg" ,
+		"name": "name", 
+		"alignment": ["Heroine","Villian"] ,
+		"appearance": ["The Brave and the Bold #200", "A", "None Are Correct", "D", "E"]
+	}
+
+	var questions = [Catwoman, Vixen, Hawkgirl, Harley, BlackCanary, Katana];
+		// 0-Catwoman
+		// 1-Vixen
+		// 2-Hawkgirl
+		// 3-Harley
+		// 4-Black Canary
+		// 5-Katana
+
+	var right = 0;
+	var total = 0;
+	var score = right/total * 100;
+
+
+function go() {
+	$('.questions').append("<h3>" + Catwoman.questionID+"</h3>");
+	$('.questions').append("<img class='character' src='" + Catwoman.picture + "'>");
+	$('.questions').append("<div class='Qinside'></div>");
+	$('.Qinside').append("<p> <span class='title'>Name:</span> </p>");
+	$('.Qinside p:first-child').append("<input class='textName' type='text' name='name'>");
+	$('.Qinside').append("<p> <span class='title'>Alignment: </span> </p>");
+	$('.Qinside p:nth-child(2)').append("<input type='radio' class='alignment' name='alignment' value='heroine'> " + Catwoman.alignment[0] + " ");
+	$('.Qinside p:nth-child(2)').append("<input type='radio' class='alignment aVill' name='alignment' value='villain'> " + Catwoman.alignment[1] + "");
+	$('.Qinside').append("<p > <span class='title'>First appearance:</span> </p>");
+	$('.Qinside p:nth-child(3)').append("<br><input type='radio' class='firstAppearance' name='firstAppearance' value='batmanIssue83'> "+ Catwoman.appearance[0] +"");
+	$('.Qinside p:nth-child(3)').append("<br><input type='radio' class='firstAppearance' name='firstAppearance' value='batmanAnimated'> "+ Catwoman.appearance[1] +"");
+	$('.Qinside p:nth-child(3)').append("<br> <input type='radio' class='firstAppearance' name='firstAppearance' value='batmanReturns'> "+ Catwoman.appearance[2] +"");
+	$('.Qinside p:nth-child(3)').append("<br> <input type='radio' class='firstAppearance' name='firstAppearance' value='batmanIssue173'>"+ Catwoman.appearance[3] +"");
+	$('.Qinside p:nth-child(3)').append("<br><input type='radio' class='firstAppearance' name='firstAppearance' value='detectiveComics27'> "+ Catwoman.appearance[4] +"");
+	$('.questions').append("<div class='submit' ></div>");
+	$('.questions .submit').append("<button> Submit </button>");
+	$('.questions .submit').append("<p><b>Question:</b> " + Catwoman.questionNumber + "</p>");
+	$('.questions .submit').append("<p><b>Score:</b> " + score + "%</p>");
+	$('.questions').append("<img class='logo' src='images/New-DC.png'>");
+};
+
+		// 1-Vixen
+		// 2-Hawkgirl
+		// 3-Harley
+		// 4-Black Canary
+		// 5-Katana
 
 });

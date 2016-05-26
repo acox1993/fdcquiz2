@@ -45,8 +45,8 @@
 			<p> <span class="title">Name:</span>
 					<input class="textName" type="text" name="name"></p>
 			<p> <span class="title">Alignment: </span>
-					<input type="radio" class="alignment" name="alignment" value="heroine"> Heroine 
-					<input type="radio" class="alignment" name="alignment" value="villain"> Villain
+					<input type="radio" class="alignment" name="alignment" value="heroine"> Heroine <!--space?-->
+					<input type="radio" class="alignment aVill" name="alignment" value="villain"> Villain
 			</p>
 			<p > <span class="title">First appearance:</span>
 					<br>
@@ -71,37 +71,44 @@
 
 	</div>
 	<div class="questions">
-		<h3>Questions</h3>
-		<img class="" src="images/Harley1.png" >
-		<div class="Qinside">
-			<p> <span class="title">Name:</span>
-					<input class="textName" type="text" name="name"></p>
-			<p> <span class="title">Alignment: </span>
-					<input type="radio" class="alignment" name="alignment" value="heroine"> Heroine 
-					<input type="radio" class="alignment" name="alignment" value="villain"> Villain
-			</p>
-			<p > <span class="title">First appearance:</span>
-					<br>
-					<input type="radio" class="firstAppearance" name="firstAppearance" value="batmanIssue83"> Batman Issue #83
-					<br>
-					<input type="radio" class="firstAppearance" name="firstAppearance" value="batmanAnimated"> Batman: The Animated Series 
-					<br>
-					<input type="radio" class="firstAppearance" name="firstAppearance" value="batmanReturns"> Batman: The Dark Knight Returns
-					<br>
-					<input type="radio" class="firstAppearance" name="firstAppearance" value="batmanIssue173"> Batman Issue #173
-					<br>
-					<input type="radio" class="firstAppearance" name="firstAppearance" value="detectiveComics27"> Detective Comics #27
+
+
+	<!-- Answer pages based on amount of correct answers -->
+		<div class="All">
+			<h3 class="Aheader">
+				Congratulations you got them all your current score is <span class="Score"></span>
+			</h3>
+			<!-- Append two images of character and a small spiel about her. Also a button to move forward to next question. Can pre-style in css -->
+		</div>
+
+		<div class="Two">
+			<h3 class="Theader">
+				Congratulations you got two out of the three correct your current score is <span class="Score"></span>
+			</h3>
+
+			<!-- Append two images of character and a small spiel about her. Also a button to move forward to next question. Can pre-style in css -->
+		</div>
+
+		<div class="One">
+			<h3 class="Oheader">
+				Sorry maybe you want to try this one again. Your current score is <span class="Score"></span>.
+			</h3>
+
+			<!-- Append buttons to either remove buttons and show the information page OR go back and try again -->
+		</div>
+
+		<div class="End">
+			<h3 class="Eheader">
+					<!-- if/else statements based on score that determine the message put here -->
+			</h3>
+			<p class="Eparagraph">
+					<!-- if/else statements based on score that determine the message put here -->
 			</p>
 
 		</div>
-		<div class="submit" >
-			<button> Submit </button>
-			<p><b>Question:</b> 1/6</p>
-			<p><b>Score:</b> 0%</p>
-		</div>
-			<img class="logo" src="images/New-DC.png">
 
 	</div>
+
 
 	
 </body>

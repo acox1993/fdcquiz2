@@ -77,12 +77,13 @@ button, .howTo .fa:hover {
 	height: 35em;
 	width: 60em;
 	display: none;
+	position: fixed;
 
 }
 
 .howTo {
 z-index: 999;
-position: fixed;
+/*position: fixed;*/
 }
 
 .howTo h3, .questions h3 {
@@ -112,6 +113,9 @@ position: fixed;
 	border: .1em solid #424f87;
 	box-shadow: 8px 8px 5px #424f87;
 	text-align: center;
+}
+.aVill {
+	margin-left: 1em;
 }
 .highlighted {
 	border: .1em solid #424f87;
@@ -175,6 +179,9 @@ div.submit p {
 
 /* Question page */
 /* Correct page */
+.All, .Two, .One, .End {
+	display: none;
+}
 /* Incorrect page */
 
 
