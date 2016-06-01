@@ -137,7 +137,7 @@ div.submit {
 	font-family: 'Acme', sans-serif;
 
 }
-div.submit button, .backOne, .nextOne {
+div.submit button, .backOne, .nextOne, .restartend {
 	background-color: #e2d8c5;
 	color: #182B5C;
 	font-weight: 700;
@@ -220,7 +220,7 @@ div.submit p {
 
 }
 /* Incorrect page */
-.nextOne, .backOne, button.restart {
+.nextOne, .backOne, button.restartend {
 	width: 7em;
 	box-shadow: 5px 5px 3px #424f87;
 	margin-top: 10em;
@@ -229,7 +229,10 @@ div.submit p {
 	margin-left: 15em;
 	/*margin-right: 5em;*/
 }
-.nextOne{
+.nextOne {
 	margin-left: 10em;
 }
 
+button.restartend{
+	margin-left: 28em;
+}

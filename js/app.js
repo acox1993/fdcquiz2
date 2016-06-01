@@ -822,9 +822,11 @@ $('.submit button.kat').click(function(){
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.One').hide().html("<h3 class='Oheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
-				$('.questions').show().append("<p class='finish'>Thank you for taking my quiz. You received a "+ score +"%. If you would like to test your knowledge again click the restart button in the upper right-hand side of the page.</p><button class='restart'>Restart</button>");
+				$('.questions').show().append("<p class='finish'>Thank you for taking my quiz. You received a "+ score +"%. If you would like to test your knowledge again click the restart button in the upper right-hand side of the page.</p><button class='restartend'>Restart</button>");
 
-				
+				$('.restartend').click(function(){
+					$('.restart').click();
+				});
 
 			});
 
@@ -837,7 +839,11 @@ $('.submit button.kat').click(function(){
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
-				$('.questions').show().append("<p class='finish'>Thank you for taking my quiz. You received a "+ score +"%. If you would like to test your knowledge again click the restart button in the upper right-hand side of the page.</p><button class='restart'>Restart</button>");
+				$('.questions').show().append("<p class='finish'>Thank you for taking my quiz. You received a "+ score +"%. If you would like to test your knowledge again click the restart button in the upper right-hand side of the page.</p> <button class='restartend'>Restart</button>");
+
+				$('.restartend').click(function(){
+					$('.restart').click();
+				});
 			});
 
 		}
