@@ -121,7 +121,7 @@ $(document).ready(function(){
 		"picture": "images/vixen2.jpg" ,
 		"name": "name",
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["Black Panther Issue #92", "Action Comics Issue #521", "African Amazon Issue #1", "None Are Correct", "N"] ,
+		"appearance": ["Black Panther Issue #92", "Action Comics Issue #521", "African Amazon Issue #1", "None Are Correct", "Suicide Squad Issue #66"] ,
 		"appearanceText": ["panther2" , "action2" , "african2" , "none2" , "n1" ]
 	}
 
@@ -133,7 +133,7 @@ $(document).ready(function(){
 		"picture": "images/Hawkgirl1.jpg" ,
 		"name": "name",
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["None are Correct", "B", "C", "D", "Flash Comics Issue #1"] ,
+		"appearance": ["None are Correct", "Justice League #10", "Action Comics Issue #200", "Flashpoint Issue #2", "Flash Comics Issue #1"] ,
 		"appearanceText": ["none3" , "B3" , "C3" , "D3" , "flash1" ]
 	}
 
@@ -157,7 +157,7 @@ $(document).ready(function(){
 		"picture": "images/Black-Canary.jpg" ,
 		"name": "name",
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["Bat ...", "None Are Correct", "B", "Flash Comic Issue #86", "D"] ,
+		"appearance": ["Green Arrow Issue #100", "None Are Correct", "Flashpoint Issue #2", "Flash Comic Issue #86", "The Arrow Issue #7"] ,
 		"appearanceText": ["A5" , "none5" , "b5" , "flash86" , "d5" ]
 	}	
 
@@ -169,7 +169,7 @@ $(document).ready(function(){
 		"picture": "images/Katana_1.jpg" ,
 		"name": "name", 
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["The Brave and the Bold #200", "A", "None Are Correct", "D", "E"] ,
+		"appearance": ["The Brave and the Bold #200", "Batman Issue #173", "None Are Correct", "Action Comics Issue #25", "Suicide Squad Issue #39"] ,
 		"appearanceText": ["brave200" , "a6" , "none6" , "d6" , "e6" ]
 	}
 
