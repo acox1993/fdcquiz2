@@ -210,8 +210,17 @@ div.submit p {
 	margin-left: 17em;
 	width:27em;
 }
+
+.finish {
+	font-family: 'Acme', sans-serif;
+	text-indent: 2em;
+	font-size: 2em;
+	margin-left: 2em;
+	width:27em;
+
+}
 /* Incorrect page */
-.nextOne, .backOne {
+.nextOne, .backOne, button.restart {
 	width: 7em;
 	box-shadow: 5px 5px 3px #424f87;
 	margin-top: 10em;

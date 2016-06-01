@@ -1,4 +1,15 @@
 $(document).ready(function(){
+	rightC = 0;
+  	rightV = 0;
+	rightH = 0;
+	rightHQ = 0;
+	rightB = 0;
+	rightK = 0;
+	rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
+	total = 0;
+	score = Number((rightO)/(total)*100);
+	if (rightO == 0 && total == 0) {score = 0};
+
 	// fade in start page
 	$('.start').delay(900).fadeIn(3000);
 	//how to open
@@ -162,15 +173,6 @@ $(document).ready(function(){
 		"appearanceText": ["brave200" , "a6" , "none6" , "d6" , "e6" ]
 	}
 
-	var rightC = 0;
-	var rightV = 0;
-	var rightH = 0;
-	var rightHQ = 0;
-	var rightB = 0;
-	var rightK = 0;
-	var rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
-	var total = 0;
-	var score = (rightO)/(total)*100; 
 
 
 function go(char) {
@@ -196,9 +198,6 @@ function go(char) {
 
 $('.submit button.cat').click(function(){
 		catwomanAnswer();
-		console.log(rightC);
-		console.log(rightO);
-		console.log(total);
 });
 $('.submit button.vix').click(function(){
 		vixenAnswer();
@@ -263,6 +262,10 @@ $('.submit button.kat').click(function(){
 		else {
 			total++;
 		};
+
+		rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
+		score = Math.round((rightO)/(total)*100);
+
 		if (rightC <= 1) {
 			$('.questions').hide().html("");
 			$('.answers').show();
@@ -368,6 +371,10 @@ $('.submit button.kat').click(function(){
 		else {
 			total++;
 		};
+
+		rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
+		score = Math.round((rightO)/(total)*100);
+
 		if (rightV <= 1) {
 			$('.questions').hide().html("");
 			$('.answers').show();
@@ -471,6 +478,10 @@ $('.submit button.kat').click(function(){
 		else {
 			total++;
 		};
+
+		rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
+		score = Math.round((rightO)/(total)*100);
+
 		if (rightH <= 1) {
 			$('.questions').hide().html("");
 			$('.answers').show();
@@ -574,6 +585,10 @@ $('.submit button.kat').click(function(){
 		else {
 			total++;
 		};
+
+		rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
+		score = Math.round((rightO)/(total)*100);
+
 		if (rightHQ <= 1) {
 			$('.questions').hide().html("");
 			$('.answers').show();
@@ -677,6 +692,10 @@ $('.submit button.kat').click(function(){
 		else {
 			total++;
 		};
+
+		rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
+		score = Math.round((rightO)/(total)*100);
+
 		if (rightB <= 1) {
 			$('.questions').hide().html("");
 			$('.answers').show();
@@ -780,6 +799,10 @@ $('.submit button.kat').click(function(){
 		else {
 			total++;
 		};
+
+		rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
+		score = Math.round((rightO)/(total)*100);
+
 		if (rightK <= 1) {
 			$('.questions').hide().html("");
 			$('.answers').show();
@@ -798,8 +821,9 @@ $('.submit button.kat').click(function(){
 			$('.One').show().append("<button class='nextOne'> Finish</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
-				$('.One').hide().html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
-				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%");
+				$('.One').hide().html("<h3 class='Oheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
+				$('.questions').show().append("<p class='finish'>Thank you for taking my quiz. You received a "+ score +"%. If you would like to test your knowledge again click the restart button in the upper right-hand side of the page.</p><button class='restart'>Restart</button>");
+
 				
 
 			});
@@ -812,9 +836,8 @@ $('.submit button.kat').click(function(){
 			$('.Two').show().append("<img class='leftA' src='images/KATAN9.jpg'><img class='rightA' src='images/Katana2.jpg'><p class='story'>Katana is a Japanese heroine named Tatsu Yamashiro. She was first seen in 1983 in the Brave and the Bold issue #200. In the Yamashiro family both of Tatsu’s brothers were infatuated with her. When they confessed their love Tatsu choose Maseo much to the chagrin of Takeo. Takeo refused to go to the wedding and joined the ancient group of evil assassins known as the Yakuza. Years later Takeo returned to kill his brother and take Tatsu as his prize. During the fight a fire broke out and while worried about his children Maseo is struck down by Takeo. Tatsu then uses the sword that killed her husband (later known as the ‘soul taker’) to disarm Takeo and escape with her life. Taste then begins training to be a samurai wielding the sword possessed by her husband’s soul.</p><button class='nextOne'> Finish</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
-				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
-				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%</p>");
-
+				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
+				$('.questions').show().append("<p class='finish'>Thank you for taking my quiz. You received a "+ score +"%. If you would like to test your knowledge again click the restart button in the upper right-hand side of the page.</p><button class='restart'>Restart</button>");
 			});
 
 		}
@@ -826,7 +849,11 @@ $('.submit button.kat').click(function(){
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
-				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%</p>");
+				$('.questions').show().append("<p class='finish'>Thank you for taking my quiz. You received a "+ score +"%. If you would like to test your knowledge again click the restart button in the upper right-hand side of the page.</p> <button class='restartend'>Restart</button>");
+
+				$('.restartend').click(function(){
+					$('.restart').click();
+				});
 
 			});
 
@@ -838,15 +865,16 @@ $('.submit button.kat').click(function(){
 	
 
 		// new quiz
-	$('.new').click(function(){
-		var rightC = 0;
-		var rightV = 0;
-		var rightH = 0;
-		var rightHQ = 0;
-		var rightB = 0;
-		var rightK = 0;
-		var rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
-		var total = 0;
+	$('.restart').click(function(){
+		rightC = 0;
+		rightV = 0;
+		rightH = 0;
+		rightHQ = 0;
+		rightB = 0;
+		rightK = 0;
+		rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
+		total = 0;
+		score = 0;
 		$('.questions').hide().html("");
 		$('.answers').hide();
 		$('.One').hide().html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
