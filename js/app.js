@@ -292,7 +292,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.Score2').append(""+ score +"%");
-			$('.Two').show().append("<img class='leftA' src='images/Catwoman2.jpg'><img class='rightA' src='images/catwoman08.jpg'><p class='story'>Catwoman aka Selina Kyle was created to be the love-interest of Batman. Their interactions were a regular game of cat and mouse, filled with strategy and sexual tension. Catwoman is different than other villains in Gotham because she doesn't kill and she isn't outright evil. She is simply an opportunistic, intelligent thief. In fact Batman reforms Catwoman for a long period of time until she returns to crime and disappears from the comic for awhile. Her disappearance is contributed to the development of rules for female character portrayals by the Comics Code Authority.</p><button class='nextOne'> Next question</button>");
+			$('.Two').show().append("<img class='leftA' src='images/Catwoman2.jpg'><img class='rightA' src='images/catwoman08.jpg'><p class='story'>Catwoman aka Selina Kyle was created to be the love-interest of Batman. She was first seen in Batman issue #1 in 1940. Batman and Catwoman's interactions were a regular game of cat and mouse, filled with strategy and sexual tension. Catwoman is different than other villains in Gotham because she doesn't kill and she isn't outright evil. She is simply an opportunistic, intelligent thief. In fact Batman reforms Catwoman for a long period of time until she returns to crime and disappears from the comic for awhile. Her disappearance is contributed to the development of rules for female character portrayals by the Comics Code Authority.</p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
@@ -306,7 +306,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.ScoreA').append(""+ score +"%");
-			$('.All').show().append("<img class='leftA' src='images/Catwoman2.jpg'><img class='rightA' src='images/catwoman08.jpg'><p class='story'>Catwoman aka Selina Kyle was created to be the love-interest of Batman. Their interactions were a regular game of cat and mouse, filled with strategy and sexual tension. Catwoman is different than other villains in Gotham because she doesn't kill and she isn't outright evil. She is simply an opportunistic, intelligent thief. In fact Batman reforms Catwoman for a long period of time until she returns to crime and disappears from the comic for awhile. Her disappearance is contributed to the development of rules for female character portrayals by the Comics Code Authority. </p><button class='nextOne'> Next question</button>");
+			$('.All').show().append("<img class='leftA' src='images/Catwoman2.jpg'><img class='rightA' src='images/catwoman08.jpg'><p class='story'>Catwoman aka Selina Kyle was created to be the love-interest of Batman. She was first seen in Batman issue #1 in 1940. Batman and Catwoman's interactions were a regular game of cat and mouse, filled with strategy and sexual tension. Catwoman is different than other villains in Gotham because she doesn't kill and she isn't outright evil. She is simply an opportunistic, intelligent thief. In fact Batman reforms Catwoman for a long period of time until she returns to crime and disappears from the comic for awhile. Her disappearance is contributed to the development of rules for female character portrayals by the Comics Code Authority. </p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 
@@ -397,7 +397,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.Score2').append(""+ score +"%");
-			$('.Two').show().append("<img class='leftA' src='images/Vixen1.jpg'><img class='rightA' src='images/vixen4.jpg'><p class='story'>Vixen story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Next question</button>");
+			$('.Two').show().append("<img class='leftA' src='images/Vixen1.jpg'><img class='rightA' src='images/vixen4.jpg'><p class='story'>Vixen grew up in a small fictional African village. After her mother was murdered by poachers  she lived for a time with her father who was murdered by his brother for the family heirloom. The totem stolen gives the wearer all the powers of the animal kingdom, and would later be the source of Vixen’s power. After the murder of both her parents Vixen moved to America and established the identity Mari McCabe. She began modeling in New York City, and eventually used her new found wealth to travel the world. On a trip back to Africa, Mari finds her uncle and takes back the Tantu Totem.</p><p class='story'> Vixen was intended to be the first African female DC Superhero to star in her own series but unfortunately it was cancelled in 1978 without being released. So her first appearance was delayed to 1981 in Action Comics issue #521.</p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
@@ -411,7 +411,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.ScoreA').append(""+ score +"%");
-			$('.All').show().append("<img class='leftA' src='images/Vixen1.jpg'><img class='rightA' src='images/vixen4.jpg'><p class='story'>Vixen story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Next question</button>");
+			$('.All').show().append("<img class='leftA' src='images/Vixen1.jpg'><img class='rightA' src='images/vixen4.jpg'><p class='story'>Vixen grew up in a small fictional African village. After her mother was murdered by poachers  she lived for a time with her father who was murdered by his brother for the family heirloom. The totem stolen gives the wearer all the powers of the animal kingdom, and would later be the source of Vixen’s power. After the murder of both her parents Vixen moved to America and established the identity Mari McCabe. She began modeling in New York City, and eventually used her new found wealth to travel the world. On a trip back to Africa, Mari finds her uncle and takes back the Tantu Totem.</p><p class='story'> Vixen was intended to be the first African female DC Superhero to star in her own series but unfortunately it was cancelled in 1978 without being released. So her first appearance was delayed to 1981 in Action Comics issue #521.</p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
@@ -500,7 +500,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.Score2').append(""+ score +"%");
-			$('.Two').show().append("<img class='leftA' src='images/hawkgirl-hawkman.jpg'><img class='rightA' src='images/hawkgir2.jpg'><p class='story'>Hawkgirl story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Next question</button>");
+			$('.Two').show().append("<img class='leftA' src='images/hawkgirl-hawkman.jpg'><img class='rightA' src='images/hawkgir2.jpg'><p class='story'>Hawkgirl was first seen as Shiera Sanders in Flash Comics issue #1 in 1940. The reincarnated heroine first appears as Hawkgirl in All Star Comics #5 in 1941.  Centuries before Shiera Sanders was born, Princess Chay-Ara and her lover Prince Khufu were killed by Hath-Set with a knife forged from Nth metal. The properties of the metal and the strength of their love lead to a bond causing them to be reincarnated, with superhuman powers, multiple times throughout centuries.</p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
@@ -514,7 +514,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.ScoreA').append(""+ score +"%");
-			$('.All').show().append("<img class='leftA' src='images/hawkgirl-hawkman.jpg'><img class='rightA' src='images/hawkgir2.jpg'><p class='story'>Hawkgirl story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Next question</button>");
+			$('.All').show().append("<img class='leftA' src='images/hawkgirl-hawkman.jpg'><img class='rightA' src='images/hawkgir2.jpg'><p class='story'>Hawkgirl was first seen as Shiera Sanders in Flash Comics issue #1 in 1940. The reincarnated heroine first appears as Hawkgirl in All Star Comics #5 in 1941.  Centuries before Shiera Sanders was born, Princess Chay-Ara and her lover Prince Khufu were killed by Hath-Set with a knife forged from Nth metal. The properties of the metal and the strength of their love lead to a bond causing them to be reincarnated, with superhuman powers, multiple times throughout centuries. </p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
@@ -603,7 +603,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.Score2').append(""+ score +"%");
-			$('.Two').show().append("<img class='leftA' src='images/HQ2.jpg'><img class='rightA' src='images/HQ3.jpg'><p class='story'>Harley Quinn story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Next question</button>");
+			$('.Two').show().append("<img class='leftA' src='images/HQ2.jpg'><img class='rightA' src='images/HQ3.jpg'><p class='story'>Harley Quinn was originally created to be a one episode walk-on role, however she has since become a regular supporting character in many outlets as well as a main character in others.The character has reinvented and/or relaunched several times, sometimes featuring new back stories and looks. Her original story was that she was a psychiatrist at Arkham Asylum named Dr. Harleen Frances Quinzel. She fell in love with a patient known as the Joker and became his accomplice and lover showing more and more crazy attributes as time went on.</p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
@@ -617,7 +617,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.ScoreA').append(""+ score +"%");
-			$('.All').show().append("<img class='leftA' src='images/HQ2.jpg'><img class='rightA' src='images/HQ3.jpg'><p class='story'>Harley Quinn story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Next question</button>");
+			$('.All').show().append("<img class='leftA' src='images/HQ2.jpg'><img class='rightA' src='images/HQ3.jpg'><p class='story'>Harley Quinn was originally created to be a one episode walk-on role, however she has since become a regular supporting character in many outlets as well as a main character in others.The character has reinvented and/or relaunched several times, sometimes featuring new back stories and looks. Her original story was that she was a psychiatrist at Arkham Asylum named Dr. Harleen Frances Quinzel. She fell in love with a patient known as the Joker and became his accomplice and lover showing more and more crazy attributes as time went on. </p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
@@ -706,7 +706,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.Score2').append(""+ score +"%");
-			$('.Two').show().append("<img class='leftA' src='images/bc2.jpg'><img class='rightA' src='images/bc1.jpg'><p class='story'>Black Canary story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Next question</button>");
+			$('.Two').show().append("<img class='leftA' src='images/bc2.jpg'><img class='rightA' src='images/bc1.jpg'><p class='story'>Black Canary was originally seen in Flash Comics issue #86 in 1947. She was originally the alter ego of Dinah Drake and later Dinah’s daughter Dinah Laurel Lance takes up the mantel. The original Canary was trained by her father, detective Richard Drake. Dinah hoped to join the Gotham City police force, however after she is turned down and her father dies Dinah turns to vigilantes justice. As a day cover she uses her inheritance to by a floral shop and runs the street as Black Canary at night.</p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
@@ -720,7 +720,7 @@ $('.submit button.kat').click(function(){
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.ScoreA').append(""+ score +"%");
-			$('.All').show().append("<img class='leftA' src='images/bc2.jpg'><img class='rightA' src='images/bc1.jpg'><p class='story'>Black Canary story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Next question</button>");
+			$('.All').show().append("<img class='leftA' src='images/bc2.jpg'><img class='rightA' src='images/bc1.jpg'><p class='story'>Black Canary was originally seen in Flash Comics issue #86 in 1947. She was originally the alter ego of Dinah Drake and later Dinah’s daughter Dinah Laurel Lance takes up the mantel. The original Canary was trained by her father, detective Richard Drake. Dinah hoped to join the Gotham City police force, however after she is turned down and her father dies Dinah turns to vigilantes justice. As a day cover she uses her inheritance to by a floral shop and runs the street as Black Canary at night. </p><button class='nextOne'> Next question</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
@@ -757,7 +757,7 @@ $('.submit button.kat').click(function(){
 		
 			// check answers
 		if (nameAnswer == "katana") {
-			rightH++;
+			rightK++;
 			total++;
 
 		}
@@ -765,7 +765,7 @@ $('.submit button.kat').click(function(){
 			total++;
 		};
 		if (alignmentAnswer == "heroine") {
-			rightH++;
+			rightK++;
 			total++;
 
 		}
@@ -773,14 +773,14 @@ $('.submit button.kat').click(function(){
 			total++;
 		};
 		if (appearanceAnswer == "brave200") {
-			rightH++;
+			rightK++;
 			total++;
 
 		}
 		else {
 			total++;
 		};
-		if (rightH <= 1) {
+		if (rightK <= 1) {
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.Score1').append(""+ score +"%");
@@ -805,30 +805,28 @@ $('.submit button.kat').click(function(){
 			});
 
 		}
-		else if (rightH == 2) {
+		else if (rightK == 2) {
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.Score2').append(""+ score +"%");
-			$('.Two').show().append("<img class='leftA' src='images/KATAN9.jpg'><img class='rightA' src='images/Katana2.jpg'><p class='story'>Katana story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Finish</button>");
+			$('.Two').show().append("<img class='leftA' src='images/KATAN9.jpg'><img class='rightA' src='images/Katana2.jpg'><p class='story'>Katana is a Japanese heroine named Tatsu Yamashiro. She was first seen in 1983 in the Brave and the Bold issue #200. In the Yamashiro family both of Tatsu’s brothers were infatuated with her. When they confessed their love Tatsu choose Maseo much to the chagrin of Takeo. Takeo refused to go to the wedding and joined the ancient group of evil assassins known as the Yakuza. Years later Takeo returned to kill his brother and take Tatsu as his prize. During the fight a fire broke out and while worried about his children Maseo is struck down by Takeo. Tatsu then uses the sword that killed her husband (later known as the ‘soul taker’) to disarm Takeo and escape with her life. Taste then begins training to be a samurai wielding the sword possessed by her husband’s soul.</p><button class='nextOne'> Finish</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
-				$('.questions').show();
-				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%");
+				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%</p>");
 
 			});
 
 		}
-		else if (rightH >= 3) {
+		else if (rightK >= 3) {
 			$('.questions').hide().html("");
 			$('.answers').show();
 			$('.ScoreA').append(""+ score +"%");
-			$('.All').show().append("<img class='leftA' src='images/KATAN9.jpg'><img class='rightA' src='images/Katana2.jpg'><p class='story'>Katana story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Finish</button>");
+			$('.All').show().append("<img class='leftA' src='images/KATAN9.jpg'><img class='rightA' src='images/Katana2.jpg'><p class='story'>Katana is a Japanese heroine named Tatsu Yamashiro. She was first seen in 1983 in the Brave and the Bold issue #200. In the Yamashiro family both of Tatsu’s brothers were infatuated with her. When they confessed their love Tatsu choose Maseo much to the chagrin of Takeo. Takeo refused to go to the wedding and joined the ancient group of evil assassins known as the Yakuza. Years later Takeo returned to kill his brother and take Tatsu as his prize. During the fight a fire broke out and while worried about his children Maseo is struck down by Takeo. Tatsu then uses the sword that killed her husband (later known as the ‘soul taker’) to disarm Takeo and escape with her life. Taste then begins training to be a samurai wielding the sword possessed by her husband’s soul. </p><button class='nextOne'> Finish</button>");
 			$('.nextOne').click(function(){
 				$('.answers').hide();
 				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
-				$('.questions').show();
-				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%");
+				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%</p>");
 
 			});
 
