@@ -68,7 +68,7 @@ button, .howTo .fa:hover {
 	cursor: pointer;
 }
 /* How to */
-.howTo, .questions {
+.howTo, .questions, .answers {
 	background-color: #f5e5cd;
 	box-shadow: 10px 10px 5px #888888;
 	margin-top: 3em;
@@ -94,7 +94,7 @@ z-index: 999;
 	margin-bottom: -1em;
 	float: right;
 }
-.howTo img, .questions img {
+.howTo img, .questions img, .leftA {
 	margin-top: -3em;
 	height: 30em;
 	float: left;
@@ -108,7 +108,7 @@ z-index: 999;
 .title {
 	margin-right: 1em;
 }
-.textName{
+.textName, .ItextName{
 	background-color: #F5E5CD;
 	border: .1em solid #424f87;
 	box-shadow: 8px 8px 5px #424f87;
@@ -137,7 +137,7 @@ div.submit {
 	font-family: 'Acme', sans-serif;
 
 }
-div.submit button {
+div.submit button, .backOne, .nextOne {
 	background-color: #e2d8c5;
 	color: #182B5C;
 	font-weight: 700;
@@ -147,6 +147,7 @@ div.submit button {
 	box-shadow: 5px 5px 3px #424f87;
 	
 }
+
 div.submit p {
 	font-size: .8em;
 }
@@ -178,10 +179,47 @@ div.submit p {
 
 
 /* Question page */
+.validation {
+	font-family: 'Acme', sans-serif;
+	color: red;
+	font-size: .7em;
+	text-indent: 8em;
+	margin-top: -.1em;
+
+}
+.validation2 {
+	margin-top: -3em;
+}
 /* Correct page */
 .All, .Two, .One, .End {
 	display: none;
 }
+.leftA {
+	margin-top: 0em;
+	width: 16em;
+}
+.rightA {
+	margin-left: 29em;
+	position: fixed;
+	height: 30em;
+	width: 15em;
+}
+.story {
+	text-indent: 2em;
+	margin-left: 17em;
+	width:27em;
+}
 /* Incorrect page */
-
+.nextOne, .backOne {
+	width: 7em;
+	box-shadow: 5px 5px 3px #424f87;
+	margin-top: 10em;
+}
+.backOne {
+	margin-left: 15em;
+	/*margin-right: 5em;*/
+}
+.nextOne{
+	margin-left: 10em;
+}
 

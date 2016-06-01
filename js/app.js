@@ -10,7 +10,7 @@ $(document).ready(function(){
 		$('.howTo').fadeIn(1000);
 		$('.start').hide();
 		$('.questions').show();
-		go();
+		go(Catwoman);
 	});
 
 	//how to close
@@ -89,104 +89,773 @@ $(document).ready(function(){
 	 	});
 
 		// 0-Catwoman
+	
+
 	var Catwoman = {
 		"questionID": "Question 1",
 		"questionNumber": "1/6",
+		"id": "cat" ,
 		"picture": "images/catwoman.jpg" ,
 		"name": "name", //how do i establish input box that right
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["Batman: The Animated Series", "Batman Issue #173", "The Cat Issue #1", "Batman Issue #1", "None Are Correct"]
+		"appearance": ["Batman: The Animated Series", "Batman Issue #173", "The Cat Issue #1", "Batman Issue #1", "None Are Correct"] ,
+		"appearanceText": ["animated" , "173" , "cat1" , "bat1" , "none1" ]
 	}
 
 		// 1-Vixen
 	var Vixen = {
 		"questionID": "Question 2",
 		"questionNumber": "2/6",
+		"id": "vix" ,
 		"picture": "images/vixen2.jpg" ,
 		"name": "name",
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["Black Panther Issue #92", "Action Comics Issue #521", "African Amazon Issue #1", "None Are Correct", "N"]
+		"appearance": ["Black Panther Issue #92", "Action Comics Issue #521", "African Amazon Issue #1", "None Are Correct", "N"] ,
+		"appearanceText": ["panther2" , "action2" , "african2" , "none2" , "n1" ]
 	}
 
 		// 2-Hawkgirl
 	var Hawkgirl = {
 		"questionID": "Question 3",
 		"questionNumber": "3/6",
+		"id": "haw" ,
 		"picture": "images/Hawkgirl1.jpg" ,
 		"name": "name",
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["None are Correct", "B", "C", "D", "Flash Comics Issue #1"]
+		"appearance": ["None are Correct", "B", "C", "D", "Flash Comics Issue #1"] ,
+		"appearanceText": ["none3" , "B3" , "C3" , "D3" , "flash1" ]
 	}
 
 		// 3-Harley
 	var Harley = {
 		"questionID": "Question 4",
 		"questionNumber": "4/6",
+		"id": "har" ,
 		"picture": "images/Harley1.png" ,
 		"name": "name",
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["Batman Issue #83", "Batman: The Animated Series", "Batman Issue #173", "Batman: The Dark Knight Returns", "Detective Comics #27"]
+		"appearance": ["Batman Issue #83", "Batman: The Animated Series", "Batman Issue #173", "Batman: The Dark Knight Returns", "Detective Comics #27"] ,
+		"appearanceText": ["bat83" , "animated2" , "bat173" , "dark" , "detective" ]
 	}
 
 		// 4-Black Canary
 	var BlackCanary = {
 		"questionID": "Question 5",
 		"questionNumber": "5/6",
+		"id": "bla" ,
 		"picture": "images/Black-Canary.jpg" ,
 		"name": "name",
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["Bat", "None Are Correct", "B", "Flash Comic Issue #86", "D"]
+		"appearance": ["Bat ...", "None Are Correct", "B", "Flash Comic Issue #86", "D"] ,
+		"appearanceText": ["A5" , "none5" , "b5" , "flash86" , "d5" ]
 	}	
 
 		// 5-Katana
 	var Katana = {
 		"questionID": "Question 6",
 		"questionNumber": "6/6",
+		"id": "kat" ,
 		"picture": "images/Katana_1.jpg" ,
 		"name": "name", 
 		"alignment": ["Heroine","Villian"] ,
-		"appearance": ["The Brave and the Bold #200", "A", "None Are Correct", "D", "E"]
+		"appearance": ["The Brave and the Bold #200", "A", "None Are Correct", "D", "E"] ,
+		"appearanceText": ["brave200" , "a6" , "none6" , "d6" , "e6" ]
 	}
 
-	var questions = [Catwoman, Vixen, Hawkgirl, Harley, BlackCanary, Katana];
-		// 0-Catwoman
-		// 1-Vixen
-		// 2-Hawkgirl
-		// 3-Harley
-		// 4-Black Canary
-		// 5-Katana
-
-	var right = 0;
+	var rightC = 0;
+	var rightV = 0;
+	var rightH = 0;
+	var rightHQ = 0;
+	var rightB = 0;
+	var rightK = 0;
+	var rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
 	var total = 0;
-	var score = right/total * 100;
+	var score = (rightO)/(total)*100; 
 
 
-function go() {
-	$('.questions').append("<h3>" + Catwoman.questionID+"</h3>");
-	$('.questions').append("<img class='character' src='" + Catwoman.picture + "'>");
+function go(char) {
+	$('.questions').append("<h3>" + char.questionID+"</h3>");
+	$('.questions').append("<img class='character' src='" + char.picture + "'>");
 	$('.questions').append("<div class='Qinside'></div>");
 	$('.Qinside').append("<p> <span class='title'>Name:</span> </p>");
-	$('.Qinside p:first-child').append("<input class='textName' type='text' name='name'>");
-	$('.Qinside').append("<p> <span class='title'>Alignment: </span> </p>");
-	$('.Qinside p:nth-child(2)').append("<input type='radio' class='alignment' name='alignment' value='heroine'> " + Catwoman.alignment[0] + " ");
-	$('.Qinside p:nth-child(2)').append("<input type='radio' class='alignment aVill' name='alignment' value='villain'> " + Catwoman.alignment[1] + "");
-	$('.Qinside').append("<p > <span class='title'>First appearance:</span> </p>");
-	$('.Qinside p:nth-child(3)').append("<br><input type='radio' class='firstAppearance' name='firstAppearance' value='batmanIssue83'> "+ Catwoman.appearance[0] +"");
-	$('.Qinside p:nth-child(3)').append("<br><input type='radio' class='firstAppearance' name='firstAppearance' value='batmanAnimated'> "+ Catwoman.appearance[1] +"");
-	$('.Qinside p:nth-child(3)').append("<br> <input type='radio' class='firstAppearance' name='firstAppearance' value='batmanReturns'> "+ Catwoman.appearance[2] +"");
-	$('.Qinside p:nth-child(3)').append("<br> <input type='radio' class='firstAppearance' name='firstAppearance' value='batmanIssue173'>"+ Catwoman.appearance[3] +"");
-	$('.Qinside p:nth-child(3)').append("<br><input type='radio' class='firstAppearance' name='firstAppearance' value='detectiveComics27'> "+ Catwoman.appearance[4] +"");
+	$('.Qinside p:first-child').append("<input class='textName "+ char.id +"' id='"+ char.id +"' type='text' name='name'>");
+	$('.Qinside').append("<p> <span class='title titleAlign'>Alignment: </span> </p>");
+	$('.Qinside p:nth-child(2)').append("<input type='radio' class='alignment "+ char.id +"' name='alignment' value='heroine'> " + char.alignment[0] + " ");
+	$('.Qinside p:nth-child(2)').append("<input type='radio' class='alignment "+ char.id + " aVill' name='alignment' value='villain'> " + char.alignment[1] + "");
+	$('.Qinside').append("<p > <span class='title titleAppear'>First appearance:</span> </p>");
+	$('.Qinside p:nth-child(3)').append("<br><input type='radio' class='firstAppearance "+ char.id + "' name='firstAppearance' value='"+ char.appearanceText[0] + "'> "+ char.appearance[0] +"");
+	$('.Qinside p:nth-child(3)').append("<br><input type='radio' class='firstAppearance "+ char.id + "' name='firstAppearance' value='"+ char.appearanceText[1] + "'> "+ char.appearance[1] +"");
+	$('.Qinside p:nth-child(3)').append("<br> <input type='radio' class='firstAppearance "+ char.id + "' name='firstAppearance' value='"+ char.appearanceText[2] + "'> "+ char.appearance[2] +"");
+	$('.Qinside p:nth-child(3)').append("<br> <input type='radio' class='firstAppearance "+ char.id + "' name='firstAppearance' value='"+ char.appearanceText[3] + "'>"+ char.appearance[3] +"");
+	$('.Qinside p:nth-child(3)').append("<br><input type='radio' class='firstAppearance "+ char.id + "' name='firstAppearance' value='"+ char.appearanceText[4] + "'> "+ char.appearance[4] +"");
 	$('.questions').append("<div class='submit' ></div>");
-	$('.questions .submit').append("<button> Submit </button>");
-	$('.questions .submit').append("<p><b>Question:</b> " + Catwoman.questionNumber + "</p>");
+	$('.questions .submit').append("<button class= '"+ char.id +"''> Submit </button>");
+	$('.questions .submit').append("<p><b>Question:</b> " + char.questionNumber + "</p>");
 	$('.questions .submit').append("<p><b>Score:</b> " + score + "%</p>");
 	$('.questions').append("<img class='logo' src='images/New-DC.png'>");
+
+$('.submit button.cat').click(function(){
+		catwomanAnswer();
+		console.log(rightC);
+		console.log(rightO);
+		console.log(total);
+});
+$('.submit button.vix').click(function(){
+		vixenAnswer();
+});
+$('.submit button.haw').click(function(){
+		hawkAnswer();
+});
+$('.submit button.har').click(function(){
+		harleyAnswer();
+});
+$('.submit button.bla').click(function(){
+		blackAnswer();
+});
+$('.submit button.kat').click(function(){
+		katanaAnswer();
+});
+	var catwomanAnswer = function() {
+		var nameAnswer = $('input.textName.cat').val().toLowerCase();
+		var alignmentAnswer = $('input.alignment.cat:checked').val();
+		var appearanceAnswer = $('input.firstAppearance.cat:checked').val();
+		
+
+				// validation
+		if (nameAnswer == "") {
+			$('input.textName').focus();
+			$("<p class='validation'> Please enter a value</p>").insertAfter($('input.textName'));
+			return;
+		};
+		if (alignmentAnswer !== "villain" && alignmentAnswer !== "heroine") {
+
+			$("<p class='validation validation2'> Please select a value</p>").insertBefore($('.titleAppear'));
+			return;
+		};
+		if (appearanceAnswer !== Catwoman.appearanceText[0] &&  appearanceAnswer !== Catwoman.appearanceText[1] && appearanceAnswer !== Catwoman.appearanceText[2] && appearanceAnswer !== Catwoman.appearanceText[3] && appearanceAnswer !== Catwoman.appearanceText[4]) {
+
+			$("<p class='validation validation2'> Please select a value</p>").appendTo($('.Qinside'));
+			return;
+		};
+		
+			// check answers
+		if (nameAnswer == "catwoman") {
+			rightC++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (alignmentAnswer == "villain") {
+			rightC++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (appearanceAnswer == "bat1") {
+			rightC++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (rightC <= 1) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score1').append(""+ score +"%");
+			$('.One').show().append("<button class='backOne'> Try Again</button>");
+			$('.backOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide();
+				$('.One').html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.backOne').remove();
+				$('.nextOne').remove();
+				$('.questions').show();
+				go(Catwoman);
+
+			});
+			$('.One').show().append("<button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide().html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.questions').show();
+				go(Vixen);
+
+			});
+
+		}
+		else if (rightC == 2) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score2').append(""+ score +"%");
+			$('.Two').show().append("<img class='leftA' src='images/Catwoman2.jpg'><img class='rightA' src='images/catwoman08.jpg'><p class='story'>Catwoman aka Selina Kyle was created to be the love-interest of Batman. Their interactions were a regular game of cat and mouse, filled with strategy and sexual tension. Catwoman is different than other villains in Gotham because she doesn't kill and she isn't outright evil. She is simply an opportunistic, intelligent thief. In fact Batman reforms Catwoman for a long period of time until she returns to crime and disappears from the comic for awhile. Her disappearance is contributed to the development of rules for female character portrayals by the Comics Code Authority.</p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
+				$('.questions').show();
+				go(Vixen);
+
+			});
+
+		}
+		else if (rightC >= 3) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.ScoreA').append(""+ score +"%");
+			$('.All').show().append("<img class='leftA' src='images/Catwoman2.jpg'><img class='rightA' src='images/catwoman08.jpg'><p class='story'>Catwoman aka Selina Kyle was created to be the love-interest of Batman. Their interactions were a regular game of cat and mouse, filled with strategy and sexual tension. Catwoman is different than other villains in Gotham because she doesn't kill and she isn't outright evil. She is simply an opportunistic, intelligent thief. In fact Batman reforms Catwoman for a long period of time until she returns to crime and disappears from the comic for awhile. Her disappearance is contributed to the development of rules for female character portrayals by the Comics Code Authority. </p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+
+				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
+
+				$('.questions').show();
+				go(Vixen);
+
+			});
+
+		};
+	}; //end cat var
+
+	var vixenAnswer = function(){
+		var nameAnswer = $('input.textName.vix').val().toLowerCase();
+		var alignmentAnswer = $('input.alignment.vix:checked').val();
+		var appearanceAnswer = $('input.firstAppearance.vix:checked').val();
+		
+
+				// validation
+		if (nameAnswer == "") {
+			$('input.textName').focus();
+			$("<p class='validation'> Please enter a value</p>").insertAfter($('input.textName'));
+			return;
+		};
+		if (alignmentAnswer !== "villain" && alignmentAnswer !== "heroine") {
+
+			$("<p class='validation validation2'> Please select a value</p>").insertBefore($('.titleAppear'));
+			return;
+		};
+		if (appearanceAnswer !== Vixen.appearanceText[0] &&  appearanceAnswer !== Vixen.appearanceText[1] && appearanceAnswer !== Vixen.appearanceText[2] && appearanceAnswer !== Vixen.appearanceText[3] && appearanceAnswer !== Vixen.appearanceText[4]) {
+
+			$("<p class='validation validation2'> Please select a value</p>").appendTo($('.Qinside'));
+			return;
+		};
+		
+			// check answers
+		if (nameAnswer == "vixen") {
+			rightV++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (alignmentAnswer == "heroine") {
+			rightV++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (appearanceAnswer == "action2") {
+			rightV++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (rightV <= 1) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score1').append(""+ score +"%");
+			$('.One').show().append("<button class='backOne'> Try Again</button>");
+			$('.backOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide();
+				$('.One').html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.backOne').remove();
+				$('.nextOne').remove();
+				$('.questions').show();
+				go(Vixen);
+
+			});
+			$('.One').show().append("<button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide().html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.questions').show();
+				go(Hawkgirl);
+
+			});
+
+		}
+		else if (rightV == 2) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score2').append(""+ score +"%");
+			$('.Two').show().append("<img class='leftA' src='images/Vixen1.jpg'><img class='rightA' src='images/vixen4.jpg'><p class='story'>Vixen story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
+				$('.questions').show();
+				go(Hawkgirl);
+
+			});
+
+		}
+		else if (rightV >= 3) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.ScoreA').append(""+ score +"%");
+			$('.All').show().append("<img class='leftA' src='images/Vixen1.jpg'><img class='rightA' src='images/vixen4.jpg'><p class='story'>Vixen story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
+				$('.questions').show();
+				go(Hawkgirl);
+
+			});
+
+		};
+	}; //end vixen var
+
+	var hawkAnswer = function(){
+		var nameAnswer = $('input.textName.haw').val().toLowerCase();
+		var alignmentAnswer = $('input.alignment.haw:checked').val();
+		var appearanceAnswer = $('input.firstAppearance.haw:checked').val();
+		
+
+				// validation
+		if (nameAnswer == "") {
+			$('input.textName').focus();
+			$("<p class='validation'> Please enter a value</p>").insertAfter($('input.textName'));
+			return;
+		};
+		if (alignmentAnswer !== "villain" && alignmentAnswer !== "heroine") {
+
+			$("<p class='validation validation2'> Please select a value</p>").insertBefore($('.titleAppear'));
+			return;
+		};
+		if (appearanceAnswer !== Hawkgirl.appearanceText[0] &&  appearanceAnswer !== Hawkgirl.appearanceText[1] && appearanceAnswer !== Hawkgirl.appearanceText[2] && appearanceAnswer !== Hawkgirl.appearanceText[3] && appearanceAnswer !== Hawkgirl.appearanceText[4]) {
+
+			$("<p class='validation validation2'> Please select a value</p>").appendTo($('.Qinside'));
+			return;
+		};
+		
+			// check answers
+		if (nameAnswer == "hawkgirl") {
+			rightH++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (alignmentAnswer == "heroine") {
+			rightH++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (appearanceAnswer == "flash1") {
+			rightH++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (rightH <= 1) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score1').append(""+ score +"%");
+			$('.One').show().append("<button class='backOne'> Try Again</button>");
+			$('.backOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide();
+				$('.One').html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.backOne').remove();
+				$('.nextOne').remove();
+				$('.questions').show();
+				go(Hawkgirl);
+
+			});
+			$('.One').show().append("<button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide().html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.questions').show();
+				go(Harley);
+
+			});
+
+		}
+		else if (rightH == 2) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score2').append(""+ score +"%");
+			$('.Two').show().append("<img class='leftA' src='images/hawkgirl-hawkman.jpg'><img class='rightA' src='images/hawkgir2.jpg'><p class='story'>Hawkgirl story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
+				$('.questions').show();
+				go(Harley);
+
+			});
+
+		}
+		else if (rightH >= 3) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.ScoreA').append(""+ score +"%");
+			$('.All').show().append("<img class='leftA' src='images/hawkgirl-hawkman.jpg'><img class='rightA' src='images/hawkgir2.jpg'><p class='story'>Hawkgirl story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
+				$('.questions').show();
+				go(Harley);
+
+			});
+
+		};
+	}; // end hawk var
+
+	var harleyAnswer = function(){
+		var nameAnswer = $('input.textName.har').val().toLowerCase();
+		var alignmentAnswer = $('input.alignment.har:checked').val();
+		var appearanceAnswer = $('input.firstAppearance.har:checked').val();
+		
+
+				// validation
+		if (nameAnswer == "") {
+			$('input.textName').focus();
+			$("<p class='validation'> Please enter a value</p>").insertAfter($('input.textName'));
+			return;
+		};
+		if (alignmentAnswer !== "villain" && alignmentAnswer !== "heroine") {
+
+			$("<p class='validation validation2'> Please select a value</p>").insertBefore($('.titleAppear'));
+			return;
+		};
+		if (appearanceAnswer !== Harley.appearanceText[0] &&  appearanceAnswer !== Harley.appearanceText[1] && appearanceAnswer !== Harley.appearanceText[2] && appearanceAnswer !== Harley.appearanceText[3] && appearanceAnswer !== Harley.appearanceText[4]) {
+
+			$("<p class='validation validation2'> Please select a value</p>").appendTo($('.Qinside'));
+			return;
+		};
+		
+			// check answers
+		if (nameAnswer == "harley quinn") {
+			rightHQ++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (alignmentAnswer == "villain") {
+			rightHQ++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (appearanceAnswer == "animated2") {
+			rightHQ++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (rightHQ <= 1) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score1').append(""+ score +"%");
+			$('.One').show().append("<button class='backOne'> Try Again</button>");
+			$('.backOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide();
+				$('.One').html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.backOne').remove();
+				$('.nextOne').remove();
+				$('.questions').show();
+				go(Harley);
+
+			});
+			$('.One').show().append("<button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide().html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.questions').show();
+				go(BlackCanary);
+
+			});
+
+		}
+		else if (rightHQ == 2) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score2').append(""+ score +"%");
+			$('.Two').show().append("<img class='leftA' src='images/HQ2.jpg'><img class='rightA' src='images/HQ3.jpg'><p class='story'>Harley Quinn story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
+				$('.questions').show();
+				go(BlackCanary);
+
+			});
+
+		}
+		else if (rightHQ >= 3) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.ScoreA').append(""+ score +"%");
+			$('.All').show().append("<img class='leftA' src='images/HQ2.jpg'><img class='rightA' src='images/HQ3.jpg'><p class='story'>Harley Quinn story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
+				$('.questions').show();
+				go(BlackCanary);
+
+			});
+
+		};
+	}; //end harley var
+
+	var blackAnswer = function(){
+		var nameAnswer = $('input.textName.bla').val().toLowerCase();
+		var alignmentAnswer = $('input.alignment.bla:checked').val();
+		var appearanceAnswer = $('input.firstAppearance.bla:checked').val();
+		
+
+				// validation
+		if (nameAnswer == "") {
+			$('input.textName').focus();
+			$("<p class='validation'> Please enter a value</p>").insertAfter($('input.textName'));
+			return;
+		};
+		if (alignmentAnswer !== "villain" && alignmentAnswer !== "heroine") {
+
+			$("<p class='validation validation2'> Please select a value</p>").insertBefore($('.titleAppear'));
+			return;
+		};
+		if (appearanceAnswer !== BlackCanary.appearanceText[0] &&  appearanceAnswer !== BlackCanary.appearanceText[1] && appearanceAnswer !== BlackCanary.appearanceText[2] && appearanceAnswer !== BlackCanary.appearanceText[3] && appearanceAnswer !== BlackCanary.appearanceText[4]) {
+
+			$("<p class='validation validation2'> Please select a value</p>").appendTo($('.Qinside'));
+			return;
+		};
+		
+			// check answers
+		if (nameAnswer == "black canary") {
+			rightB++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (alignmentAnswer == "heroine") {
+			rightB++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (appearanceAnswer == "flash86") {
+			rightB++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (rightB <= 1) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score1').append(""+ score +"%");
+			$('.One').show().append("<button class='backOne'> Try Again</button>");
+			$('.backOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide();
+				$('.One').html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.backOne').remove();
+				$('.nextOne').remove();
+				$('.questions').show();
+				go(BlackCanary);
+
+			});
+			$('.One').show().append("<button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide().html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.questions').show();
+				go(Katana);
+
+			});
+
+		}
+		else if (rightB == 2) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score2').append(""+ score +"%");
+			$('.Two').show().append("<img class='leftA' src='images/bc2.jpg'><img class='rightA' src='images/bc1.jpg'><p class='story'>Black Canary story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
+				$('.questions').show();
+				go(Katana);
+
+			});
+
+		}
+		else if (rightB >= 3) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.ScoreA').append(""+ score +"%");
+			$('.All').show().append("<img class='leftA' src='images/bc2.jpg'><img class='rightA' src='images/bc1.jpg'><p class='story'>Black Canary story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Next question</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
+				$('.questions').show();
+				go(Katana);
+
+			});
+
+		};
+	}; //end black var
+
+	var katanaAnswer = function(){
+		var nameAnswer = $('input.textName.kat').val().toLowerCase();
+		var alignmentAnswer = $('input.alignment.kat:checked').val();
+		var appearanceAnswer = $('input.firstAppearance.kat:checked').val();
+		
+
+				// validation
+		if (nameAnswer == "") {
+			$('input.textName').focus();
+			$("<p class='validation'> Please enter a value</p>").insertAfter($('input.textName'));
+			return;
+		};
+		if (alignmentAnswer !== "villain" && alignmentAnswer !== "heroine") {
+
+			$("<p class='validation validation2'> Please select a value</p>").insertBefore($('.titleAppear'));
+			return;
+		};
+		if (appearanceAnswer !== Katana.appearanceText[0] &&  appearanceAnswer !== Katana.appearanceText[1] && appearanceAnswer !== Katana.appearanceText[2] && appearanceAnswer !== Katana.appearanceText[3] && appearanceAnswer !== Katana.appearanceText[4]) {
+
+			$("<p class='validation validation2'> Please select a value</p>").appendTo($('.Qinside'));
+			return;
+		};
+		
+			// check answers
+		if (nameAnswer == "katana") {
+			rightH++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (alignmentAnswer == "heroine") {
+			rightH++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (appearanceAnswer == "brave200") {
+			rightH++;
+			total++;
+
+		}
+		else {
+			total++;
+		};
+		if (rightH <= 1) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score1').append(""+ score +"%");
+			$('.One').show().append("<button class='backOne'> Try Again</button>");
+			$('.backOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide();
+				$('.One').html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.backOne').remove();
+				$('.nextOne').remove();
+				$('.questions').show();
+				go(Katana);
+
+			});
+			$('.One').show().append("<button class='nextOne'> Finish</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.One').hide().html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%");
+				
+
+			});
+
+		}
+		else if (rightH == 2) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.Score2').append(""+ score +"%");
+			$('.Two').show().append("<img class='leftA' src='images/KATAN9.jpg'><img class='rightA' src='images/Katana2.jpg'><p class='story'>Katana story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt.</p><button class='nextOne'> Finish</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
+				$('.questions').show();
+				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%");
+
+			});
+
+		}
+		else if (rightH >= 3) {
+			$('.questions').hide().html("");
+			$('.answers').show();
+			$('.ScoreA').append(""+ score +"%");
+			$('.All').show().append("<img class='leftA' src='images/KATAN9.jpg'><img class='rightA' src='images/Katana2.jpg'><p class='story'>Katana story Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, quos, error pariatur harum aliquam at, veniam deserunt quam excepturi iste hic. Numquam, dolore. Sed beatae ea omnis, consequuntur est, quia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod praesentium asperiores nihil provident tenetur necessitatibus illo! Veritatis molestias ad reprehenderit fugiat voluptates, quia nisi aliquam ab consequatur iste voluptatem nesciunt. </p><button class='nextOne'> Finish</button>");
+			$('.nextOne').click(function(){
+				$('.answers').hide();
+				$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
+				$('.questions').show();
+				$('.questions').show().append("<p> Thank you taking my quiz. I hope you enjoyed it. Your final score was a "+ Score +"%");
+
+			});
+
+		};
+	}; //end katana var
+	
 };
 
-		// 1-Vixen
-		// 2-Hawkgirl
-		// 3-Harley
-		// 4-Black Canary
-		// 5-Katana
+	
+
+		// new quiz
+	$('.new').click(function(){
+		var rightC = 0;
+		var rightV = 0;
+		var rightH = 0;
+		var rightHQ = 0;
+		var rightB = 0;
+		var rightK = 0;
+		var rightO = rightC + rightV + rightH + rightHQ + rightB + rightK;
+		var total = 0;
+		$('.questions').hide().html("");
+		$('.answers').hide();
+		$('.One').hide().html("<h3 class='Oheader'>Sorry maybe you want to try this one again. Your current score is <span class='Score Score1'></span>.</h3>");
+		$('.Two').hide().html("<h3 class='Theader'>Congratulations you got two out of the three correct your current score is <span class='Score Score2'></span>.</h3>");
+		$('.All').hide().html("<h3 class='Aheader'>Congratulations you got them all your current score is <span class='Score ScoreA'></span>.</h3>");
+		$('.howTo').hide();
+		$('.start').show();
+	});
 
 });
